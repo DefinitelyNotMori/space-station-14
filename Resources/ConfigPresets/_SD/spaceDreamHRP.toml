@@ -1,0 +1,26 @@
+# Space Dream - HRP
+# Load: config.presets = "_Orion/spaceDreamCore,_Orion/spaceDreamHRP"
+
+[net]
+port = 1212
+
+[game]
+hostname = "[RU][18+][HRP] Space Dream"
+desc = "Русскоязычный сервер повышенного ролевого отыгрыша (HRP) для игроков 18+."
+defaultpreset = "secret"
+fallbackpreset = "Extended"
+fallbackenabled = true
+map_pool = "DefaultMapPool"
+
+[status]
+connectaddress = "udp://ss14.pw/play/spacedream"
+
+[hub]
+tags = "18+,lang:ru,rp:high,region:eu_e,no_tag_infer"
+server_url = "https://ss14.pw/play/spacedream"
+
+[chat]
+motd = "Добро пожаловать на Space Dream!"
+
+[events]
+enabled = true
