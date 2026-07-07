@@ -1,5 +1,11 @@
 # Space Dream - HRP
-# Load: config.presets = "_Orion/spaceDreamCore,_Orion/spaceDreamHRP"
+# Watchdog server.toml for prod instance MUST contain:
+#   [config]
+#   presets = "_SD/spaceDreamCore,_SD/spaceDreamHRP"
+#   [net]
+#   port = 1212
+#
+# Presets only set defaults; net.port in server.toml overrides them.
 
 [net]
 port = 1212
@@ -17,7 +23,7 @@ connectaddress = "udp://ss14.pw/play/spacedream"
 
 [hub]
 tags = "18+,lang:ru,rp:high,region:eu_e,no_tag_infer"
-server_url = "https://ss14.pw/play/spacedream"
+server_url = "ss14s://ss14.pw/play/spacedream"
 
 [chat]
 motd = "Добро пожаловать на Space Dream!"

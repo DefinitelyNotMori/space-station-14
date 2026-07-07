@@ -1,5 +1,11 @@
 # Space Dream - mapping
-# Requires: _Orion/spaceDreamCore
+# Watchdog server.toml for mapping instance MUST contain:
+#   [config]
+#   presets = "_SD/spaceDreamCore,_SD/spaceDreamMapping"
+#   [net]
+#   port = 1213
+#
+# Presets only set defaults; net.port in server.toml overrides them.
 
 [net]
 port = 1213
@@ -22,13 +28,10 @@ ipintel_enabled = false
 station_goal = false
 showgreentext = false
 
-[status]
-connectaddress = "udp://ss14.pw/play/mapping"
-
 [hub]
 advertise = 0
 tags = "lang:ru,no_tag_infer"
-server_url = "https://ss14.pw/spacedream"
+server_url = "ss14s://ss14.pw/spacedream"
 
 [events]
 enabled = false
