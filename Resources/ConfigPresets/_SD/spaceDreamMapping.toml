@@ -1,65 +1,31 @@
-# Space Dream - mapping
-# Watchdog server.toml for mapping instance MUST contain:
-#   [config]
-#   presets = "_SD/spaceDreamCore,_SD/spaceDreamMapping"
-#   [net]
-#   port = 1213
-#
-# Presets only set defaults; net.port in server.toml overrides them.
-
 [net]
-port = 1213
+port = 1212
+tickrate = 20
+
+[server]
+id = "SpaceDreamMapping"
+rules_file = "OrionRuleset"
+
+[auth]
+mode = 1
 
 [game]
-hostname = "Space Dream - Mapping"
-desc = "Приватный сервер для мапперов Space Dream. Не для публичной игры."
-dummyticker = false
+hostname = "Space Dream // Mapping"
 lobbyenabled = false
 soft_max_players = 8
 role_timers = false
-role_whitelist = false
 map = "Empty"
 map_rotation = false
 defaultpreset = "Sandbox"
-fallbackenabled = false
-disallowlatejoins = false
-panic_bunker.enabled = false
 ipintel_enabled = false
-station_goal = false
-showgreentext = false
 
 [hub]
-advertise = 0
-tags = "lang:ru,no_tag_infer"
-server_url = "ss14s://ss14.pw/spacedream"
+advertise = 1
+hub_urls = "https://hub.spacestation14.com/"
+tags = "region:eu_e,no_tag_infer"
+server_url = "ss14s://ss14.pw:1212"
 
 [events]
-enabled = false
-
-[ghost]
-role_time = 0
-quick_lottery = true
-
-[gateway]
-generator_enabled = false
-
-[procgen]
-preload = false
-
-[physics]
-grid_splitting = false
-
-[shuttle]
-grid_fill = false
-auto_call_time = 0
-emergency = false
-arrivals = false
-preload_grids = false
-
-[lavaland]
-enabled = false
-
-[worldgen]
 enabled = false
 
 [queue]
@@ -68,21 +34,27 @@ enabled = false
 [vote]
 enabled = false
 
-[ooc]
-enable_during_round = true
+[lavaland]
+enabled = false
 
-[looc]
-enabled = true
-enabled_dead = true
-enabled_crit = true
+[worldgen]
+enabled = false
+
+[shuttle]
+emergency = false
+arrivals = false
+grid_fill = false
+
+[physics]
+grid_splitting = false
 
 [mapping]
 autosave = true
 autosave_interval = 300
 autosave_dir = "Autosaves/SpaceDream"
 
+[ooc]
+enable_during_round = true
+
 [movement]
 mob_pushing = true
-
-[ic]
-ssd_sleep = false
