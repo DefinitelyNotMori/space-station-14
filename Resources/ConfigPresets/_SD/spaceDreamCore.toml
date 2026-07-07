@@ -1,0 +1,157 @@
+# Space Dream - shared production base.
+
+[build]
+fork_id = "Orion"
+
+[log]
+path = "logs"
+format = "log_%(date)s-%(time)s.txt"
+level = 2
+enabled = true
+
+[net]
+tickrate = 30
+max_connections = 512
+lidgren_log_warning = false
+lidgren_log_error = false
+log_late_msg = false
+
+[netres]
+limit = 8.0
+
+[status]
+enabled = true
+
+[server]
+id = "SpaceDream"
+rules_file = "OrionRuleset"
+default_guide = "NewPlayer"
+lobby_right_panel_width = 650
+
+[auth]
+mode = 1
+allowlocal = false
+
+[console]
+loginlocal = false
+
+[hub]
+advertise = 1
+advertise_interval = 45
+use_dynamic_hostname = false
+hub_urls = "https://hub.spacestation14.com/"
+
+[infolinks]
+discord = "https://discord.gg/spacedream"
+github = "https://github.com/insvrg3ncy/space-station-14"
+bug_report = "https://github.com/insvrg3ncy/space-station-14/issues/new"
+
+[admin]
+see_own_notes = true
+deadmin_on_join = true
+bypass_max_players = true
+new_player_threshold = 600
+alert.min_players_sharing_connection = 2
+allow_multi_server_play = false
+announce_login = true
+announce_logout = true
+
+[adminlogs]
+enabled = true
+server_name = "Space Dream"
+
+[ban]
+hardware_ids = true
+
+[queue]
+enabled = true
+patreon_skip = false
+reconnect_grace_seconds = 180
+
+[game]
+soft_max_players = 60
+maxcharacterslots = 15
+lobbyenabled = true
+lobbyduration = 420
+round_restart_time = 360
+round_end_pvs_overrides = false
+role_timers = true
+role_whitelist = true
+cryo_sleep_rejoining = true
+map_rotation = true
+map_memory_depth = 20
+ipintel_enabled = true
+ipintel_bad_rating = 0.95
+ipintel_alert_admin_warn_rating = 0.90
+ipintel_alert_admin_rejected = true
+station_goal = true
+showgreentext = false
+contraband_examine_only_in_hud = true
+
+[chat]
+show_typing_indicator = true
+
+[ic]
+flavor_text = true
+punctuation = true
+name_case = true
+restricted_names = true
+ssd_sleep = true
+ssd_sleep_time = 900
+flavor_traits_enabled = true
+flavor_nsfw_enabled = true
+flavor_gyr_enabled = true
+flavor_ooc_enabled = true
+flavor_links_enabled = true
+
+[ooc]
+enable_during_round = false
+
+[looc]
+enabled = true
+enabled_dead = false
+enabled_crit = false
+
+[ghost]
+role_time = 5
+quick_lottery = false
+kill_crit = true
+respawn_time = 420
+respawn_max_players = 60
+
+[vote]
+enabled = true
+restart_enabled = false
+restart_not_allowed_when_admin_online = true
+map_enabled = false
+preset_enabled = false
+restart_required_ratio = 0.85
+
+[shuttle]
+emergency_early_launch_allowed = false
+auto_call_time = 120
+
+[biomass]
+easy_mode = false
+
+[movement]
+mob_pushing = false
+
+[mood]
+enabled = true
+increases_speed = true
+decreases_speed = true
+
+[lavaland]
+enabled = true
+
+[mapping]
+autosave = true
+autosave_interval = 600
+autosave_dir = "Autosaves"
+
+[worldgen]
+enabled = true
+
+[voice]
+barks_enabled = true

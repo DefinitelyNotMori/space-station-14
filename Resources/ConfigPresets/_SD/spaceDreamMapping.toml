@@ -1,0 +1,85 @@
+# Space Dream - mapping
+# Requires: _Orion/spaceDreamCore
+
+[net]
+port = 1213
+
+[game]
+hostname = "Space Dream - Mapping"
+desc = "Приватный сервер для мапперов Space Dream. Не для публичной игры."
+dummyticker = false
+lobbyenabled = false
+soft_max_players = 8
+role_timers = false
+role_whitelist = false
+map = "Empty"
+map_rotation = false
+defaultpreset = "Sandbox"
+fallbackenabled = false
+disallowlatejoins = false
+panic_bunker.enabled = false
+ipintel_enabled = false
+station_goal = false
+showgreentext = false
+
+[status]
+connectaddress = "udp://ss14.pw/play/mapping"
+
+[hub]
+advertise = 0
+tags = "lang:ru,no_tag_infer"
+server_url = "https://ss14.pw/spacedream"
+
+[events]
+enabled = false
+
+[ghost]
+role_time = 0
+quick_lottery = true
+
+[gateway]
+generator_enabled = false
+
+[procgen]
+preload = false
+
+[physics]
+grid_splitting = false
+
+[shuttle]
+grid_fill = false
+auto_call_time = 0
+emergency = false
+arrivals = false
+preload_grids = false
+
+[lavaland]
+enabled = false
+
+[worldgen]
+enabled = false
+
+[queue]
+enabled = false
+
+[vote]
+enabled = false
+
+[ooc]
+enable_during_round = true
+
+[looc]
+enabled = true
+enabled_dead = true
+enabled_crit = true
+
+[mapping]
+autosave = true
+autosave_interval = 300
+autosave_dir = "Autosaves/SpaceDream"
+
+[movement]
+mob_pushing = true
+
+[ic]
+ssd_sleep = false
