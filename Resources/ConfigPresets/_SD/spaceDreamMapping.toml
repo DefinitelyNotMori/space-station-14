@@ -1,5 +1,11 @@
 # Space Dream - mapping
-# Requires: _Orion/spaceDreamCore
+# Watchdog server.toml for mapping instance MUST contain:
+#   [config]
+#   presets = "_SD/spaceDreamCore,_SD/spaceDreamMapping"
+#   [net]
+#   port = 1213
+#
+# Presets only set defaults; net.port in server.toml overrides them.
 
 [net]
 port = 1213

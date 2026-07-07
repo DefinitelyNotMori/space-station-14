@@ -1,5 +1,11 @@
 # Space Dream - HRP
-# Load: config.presets = "_Orion/spaceDreamCore,_Orion/spaceDreamHRP"
+# Watchdog server.toml for prod instance MUST contain:
+#   [config]
+#   presets = "_SD/spaceDreamCore,_SD/spaceDreamHRP"
+#   [net]
+#   port = 1212
+#
+# Presets only set defaults; net.port in server.toml overrides them.
 
 [net]
 port = 1212
