@@ -1,32 +1,29 @@
-# Space Dream - HRP
-# Watchdog server.toml for prod instance MUST contain:
-#   [config]
-#   presets = "_SD/spaceDreamCore,_SD/spaceDreamHRP"
-#   [net]
-#   port = 1212
-#
-# Presets only set defaults; net.port in server.toml overrides them.
-
 [net]
-port = 1212
+port = 3301
+
+[server]
+id = "SpaceDream"
+rules_file = "OrionRuleset"
+
+[auth]
+mode = 1
+allowlocal = false
 
 [game]
 hostname = "[RU][18+][HRP] Space Dream"
-desc = "Русскоязычный сервер повышенного ролевого отыгрыша (HRP) для игроков 18+."
+desc = "Русскоязычный HRP-сервер 18+."
 defaultpreset = "secret"
 fallbackpreset = "Extended"
-fallbackenabled = true
 map_pool = "DefaultMapPool"
-
-[status]
-connectaddress = "udp://ss14.pw/play/spacedream"
+soft_max_players = 60
+lobbyduration = 300
 
 [hub]
+advertise = 1
+hub_urls = "https://hub.spacestation14.com/"
 tags = "18+,lang:ru,rp:high,region:eu_e,no_tag_infer"
-server_url = "ss14s://ss14.pw/play/spacedream"
+server_url = "ss14s://ss14.pw:3301"
 
-[chat]
-motd = "Добро пожаловать на Space Dream!"
-
-[events]
-enabled = true
+[infolinks]
+discord = "https://discord.gg/spacedream"
+github = "https://github.com/insvrg3ncy/space-station-14"
