@@ -510,6 +510,7 @@
   - type: VisibleContraband # Goobstation
   - type: Posing # Orion
   - type: MomentumSteering # Goobstation - No steer
+  - type: Arousal # SD
 
 - type: entity
   save: false
