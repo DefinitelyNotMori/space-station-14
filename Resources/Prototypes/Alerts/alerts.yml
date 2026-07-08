@@ -171,6 +171,7 @@
   - alertType: DragonPower # Goobstation
   - category: Ninjutsu # Goobstation
   - category: Counter # WD EDIT
+  - alertType: Arousal # SD
 
 - type: entity
   id: AlertSpriteView

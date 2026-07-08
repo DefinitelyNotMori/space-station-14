@@ -105,6 +105,8 @@
       collection: ReptilianHisses
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Moan:
+      collection: MaleMoan # SD
 
 - type: emoteSounds
   id: FemaleHuman
@@ -151,6 +153,8 @@
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
+    Moan:
+      collection: FemaleMoan # SD
 
 - type: emoteSounds ## GOOB CONTENT START
   id: MonkeyMode
@@ -197,6 +201,8 @@
       path: /Audio/_Goobstation/Voice/Human/gulp.ogg ## GOOB CONTENT END
     Hiss: # Orion
       collection: ReptilianHisses
+    Moan:
+      collection: MaleMoan # SD
 
 - type: emoteSounds
   id: MaleReptilian
@@ -241,7 +247,9 @@
       collection: MaleCoughs
     Yawn: # Goob
       collection: MaleYawn
-
+    Moan:
+      collection: MaleMoan # SD
+      
 - type: emoteSounds
   id: FemaleReptilian
   params:
@@ -285,7 +293,9 @@
       collection: FemaleCoughs
     Yawn: # Goob
       collection: FemaleYawn
-
+    Moan:
+      collection: FemaleMoan # SD
+      
 - type: emoteSounds
   id: MaleSlime
   sounds:
@@ -339,7 +349,9 @@
       path: /Audio/_Goobstation/Voice/surprised.ogg
   params:
     variation: 0.125
-
+    Moan:
+      collection: MaleMoan # SD
+      
 - type: emoteSounds
   id: FemaleSlime
   sounds:
@@ -393,6 +405,8 @@
       path: /Audio/_Goobstation/Voice/surprised.ogg
   params:
     variation: 0.125
+    Moan:
+      collection: FemaleMoan # SD
 
 - type: emoteSounds
   id: UnisexVox
@@ -449,7 +463,9 @@
       collection: HarpyCaws
   params:
     variation: 0.125
-
+    Moan:
+      collection: MaleMoan # SD
+      
 - type: emoteSounds
   id: UnisexDiona
   sounds:
@@ -489,7 +505,9 @@
       collection: Dionasigh
   params:
     variation: 0.125
-
+    Moan:
+      collection: MaleMoan # SD
+      
 - type: emoteSounds
   id: UnisexArachnid
   params:
