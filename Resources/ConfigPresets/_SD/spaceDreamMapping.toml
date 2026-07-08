@@ -1,60 +1,31 @@
+[log]
+path = "logs"
+format = "log_%(date)s-%(time)s.txt"
+level = 1
+enabled = false
+
 [net]
-port = 1212
-tickrate = 20
-
-[server]
-id = "SpaceDreamMapping"
-rules_file = "OrionRuleset"
-
-[auth]
-mode = 1
+tickrate = 30
+port = 3301
+bindto = "::,0.0.0.0"
+max_connections = 256
 
 [game]
-hostname = "Space Dream // Mapping"
-lobbyenabled = false
-soft_max_players = 8
-role_timers = false
-map = "Empty"
-map_rotation = false
-defaultpreset = "Sandbox"
-ipintel_enabled = false
+hostname = "[18+][RU] Space Dream"
+desc = """18+ сервер на сборке Orion."""
+
+soft_max_players = 80
+lobbyduration = 300
+
+
+[console]
+loginlocal = true
 
 [hub]
-advertise = 1
+advertise = true
+tags = "ru;rp:hrp,eu:e"
 hub_urls = "https://hub.spacestation14.com/"
-tags = "region:eu_e,no_tag_infer"
-server_url = "ss14s://ss14.pw:1212"
 
-[events]
-enabled = false
-
-[queue]
-enabled = false
-
-[vote]
-enabled = false
-
-[lavaland]
-enabled = false
-
-[worldgen]
-enabled = false
-
-[shuttle]
-emergency = false
-arrivals = false
-grid_fill = false
-
-[physics]
-grid_splitting = false
-
-[mapping]
-autosave = true
-autosave_interval = 300
-autosave_dir = "Autosaves/SpaceDream"
-
-[ooc]
-enable_during_round = true
-
-[movement]
-mob_pushing = true
+[database]
+# Database type to use. Can be "sqlite" or "postgres" currently.
+engine = "sqlite"
