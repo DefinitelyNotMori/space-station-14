@@ -45,6 +45,9 @@ public enum SlotFlags
     UNDERSHIRT = 1 << 18,
     SOCKS = 1 << 19,
     WRISTS = 1 << 20,
+    // SD-Start
+    UNDERPOCKET = 1 << 21,
+    // SD-End
     // Orion-End
     All = ~NONE,
 
