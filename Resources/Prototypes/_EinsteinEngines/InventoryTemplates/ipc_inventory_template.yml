@@ -201,6 +201,18 @@
       strippingWindowPos: 3,1
       displayName: Underwear
       stripTime: 6
+    - name: underpocket
+      slotTexture: underpocket
+      fullTextureName: template_small
+      slotFlags: UNDERPOCKET
+      slotGroup: Extra
+      uiWindowPos: 1,0
+      strippingWindowPos: 3,5
+      displayName: Anus
+      stripTime: 6
+      whitelist:
+        tags:
+        - underpocket
     - name: wrists
       slotTexture: wrists
       fullTextureName: template_small
