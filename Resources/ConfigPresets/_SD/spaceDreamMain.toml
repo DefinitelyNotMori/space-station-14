@@ -32,7 +32,7 @@ engine = "postgres"
 
 # i dont think you need to see that
 pg_host = ""
-pg_port = 
+pg_port = 5432
 pg_database = ""
 pg_username = ""
 pg_password = ""
