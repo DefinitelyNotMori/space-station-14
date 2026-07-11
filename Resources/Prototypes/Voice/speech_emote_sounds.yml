@@ -347,11 +347,11 @@
       collection: ReptilianHisses
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
-  params:
-    variation: 0.125
     Moan:
       collection: MaleMoan # SD
-      
+  params:
+    variation: 0.125
+
 - type: emoteSounds
   id: FemaleSlime
   sounds:
@@ -403,10 +403,10 @@
       collection: ReptilianHisses
     Surprised: # Goob
       path: /Audio/_Goobstation/Voice/surprised.ogg
-  params:
-    variation: 0.125
     Moan:
       collection: FemaleMoan # SD
+  params:
+    variation: 0.125
 
 - type: emoteSounds
   id: UnisexVox
@@ -461,11 +461,11 @@
       collection: VoxHiss
     Caw:
       collection: HarpyCaws
-  params:
-    variation: 0.125
     Moan:
       collection: MaleMoan # SD
-      
+  params:
+    variation: 0.125
+
 - type: emoteSounds
   id: UnisexDiona
   sounds:
@@ -503,11 +503,11 @@
       collection: Dionayawn
     Sigh: #goob
       collection: Dionasigh
-  params:
-    variation: 0.125
     Moan:
       collection: MaleMoan # SD
-      
+  params:
+    variation: 0.125
+
 - type: emoteSounds
   id: UnisexArachnid
   params:
