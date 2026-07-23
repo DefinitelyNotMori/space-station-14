@@ -573,7 +573,15 @@ namespace Content.Server.Voting.Managers
 
                         uint minutes = (uint)_cfg.GetCVar(CCVars.VotekickBanDuration);
 
-                        _bans.CreateServerBan(targetUid, target, null, targetIP, targetHWid, minutes, severity, Loc.GetString("votekick-ban-reason", ("reason", reason)));
+                        var banInfo = new CreateServerBanInfo(Loc.GetString("votekick-ban-reason", ("reason", reason)));
+                        banInfo.AddUser(targetUid, target);
+                        banInfo.AddHWId(targetHWid);
+                        if (targetIP is { } addressRange)
+                            banInfo.AddAddressRange(addressRange);
+                        banInfo.WithSeverity(severity);
+                        if (minutes != 0)
+                            banInfo.WithMinutes(minutes);
+                        _bans.CreateServerBan(banInfo);
                     }
                 }
                 else

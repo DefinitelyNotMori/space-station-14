@@ -1,13 +1,3 @@
-// SPDX-FileCopyrightText: 2021 Visne <39844191+Visne@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 DrSmugleaf <DrSmugleaf@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2022 mirrorcult <lunarautomaton6@gmail.com>
-// SPDX-FileCopyrightText: 2022 wrexbe <81056464+wrexbe@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 Leon Friedrich <60421075+ElectroJr@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2023 metalgearsloth <31366439+metalgearsloth@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-//
-// SPDX-License-Identifier: MIT
-
 ﻿using Content.Server.Database;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
@@ -15,9 +5,9 @@ using Robust.Shared.Console;
 namespace Content.Server.Administration.Commands
 {
     [AdminCommand(AdminFlags.Ban)]
-    public sealed class PardonCommand : LocalizedCommands
+    public sealed partial class PardonCommand : LocalizedCommands
     {
-        [Dependency] private readonly IServerDbManager _dbManager = default!;
+        [Dependency] private IServerDbManager _dbManager = default!;
 
         public override string Command => "pardon";
 
@@ -33,11 +23,11 @@ namespace Content.Server.Administration.Commands
 
             if (!int.TryParse(args[0], out var banId))
             {
-                shell.WriteLine(Loc.GetString("cmd-pardon-unable-to-parse", ("id", args[0]), ("help", Help)));
+                shell.WriteLine(Loc.GetString($"cmd-pardon-unable-to-parse", ("id", args[0]), ("help", Help)));
                 return;
             }
 
-            var ban = await _dbManager.GetServerBanAsync(banId);
+            var ban = await _dbManager.GetBanAsync(banId);
 
             if (ban == null)
             {
@@ -49,20 +39,20 @@ namespace Content.Server.Administration.Commands
             {
                 if (ban.Unban.UnbanningAdmin != null)
                 {
-                    shell.WriteLine(Loc.GetString("cmd-pardon-already-pardoned-specific",
+                    shell.WriteLine(Loc.GetString($"cmd-pardon-already-pardoned-specific",
                         ("admin", ban.Unban.UnbanningAdmin.Value),
                         ("time", ban.Unban.UnbanTime)));
                 }
 
                 else
-                    shell.WriteLine(Loc.GetString("cmd-pardon-already-pardoned"));
+                    shell.WriteLine(Loc.GetString($"cmd-pardon-already-pardoned"));
 
                 return;
             }
 
-            await _dbManager.AddServerUnbanAsync(new ServerUnbanDef(banId, player?.UserId, DateTimeOffset.Now));
+            await _dbManager.AddUnbanAsync(new UnbanDef(banId, player?.UserId, DateTimeOffset.Now));
 
-            shell.WriteLine(Loc.GetString("cmd-pardon-success", ("id", banId)));
+            shell.WriteLine(Loc.GetString($"cmd-pardon-success", ("id", banId)));
         }
     }
 }

@@ -20,6 +20,16 @@ namespace Content.Server.IP
     {
         // Npgsql used to map inet types as a tuple like this.
         // I'm upgrading the dependencies and I don't wanna rewrite a bunch of DB code, so a few helpers it shall be.
+        public static NpgsqlInet ToNpgsqlInet(this (IPAddress, int) tuple)
+        {
+            return new NpgsqlInet(tuple.Item1, (byte) tuple.Item2);
+        }
+
+        public static (IPAddress, int) ToTuple(this NpgsqlInet inet)
+        {
+            return (inet.Address, inet.Netmask);
+        }
+
         [return: NotNullIfNotNull(nameof(tuple))]
         public static NpgsqlInet? ToNpgsqlInet(this (IPAddress, int)? tuple)
         {

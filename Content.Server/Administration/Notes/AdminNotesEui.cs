@@ -130,7 +130,7 @@ public sealed class AdminNotesEui : BaseEui
 
     private void NoteModified(SharedAdminNote note)
     {
-        if (note.Player != NotedPlayer)
+        if (!note.Players.Contains(new NetUserId(NotedPlayer)))
             return;
 
         Notes[(note.Id, note.NoteType)] = note;
@@ -139,7 +139,7 @@ public sealed class AdminNotesEui : BaseEui
 
     private void NoteDeleted(SharedAdminNote note)
     {
-        if (note.Player != NotedPlayer)
+        if (!note.Players.Contains(new NetUserId(NotedPlayer)))
             return;
 
         Notes.Remove((note.Id, note.NoteType));
