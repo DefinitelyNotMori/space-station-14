@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseAction
+  id: ActionThunderdomeHailer
+  name: Hail
+  description: Shout random phrase.
+  components:
+  - type: Action
+    icon: { sprite: Clothing/Mask/gassecurity.rsi, state: icon }
+  - type: InstantAction
+    event: !type:ThunderdomeHailerActionEvent
