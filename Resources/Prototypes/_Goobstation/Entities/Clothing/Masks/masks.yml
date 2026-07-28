@@ -204,7 +204,7 @@
         Heat: 0.9 #i didnt precisely tune this because i dont care
   - type: Tag
     tags: [] # no whitelist chameleon
-  - type: Hailer # needs its own voicelines for thunderdome eventually but for now its good enough
+  - type: HailerThunderdome # Space Dream edit
   - type: IngestionBlocker
     blockSmokeIngestion: true
     enabled: false
