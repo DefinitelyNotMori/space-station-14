@@ -26,6 +26,10 @@ public sealed partial class HailerThunderdomeSystem : EntitySystem
     {
         "/Audio/_SD/Hailer/Umresh.ogg",
         "/Audio/_SD/Hailer/DaiteEmyStul.ogg",
+        "/Audio/_SD/Hailer/Jackson.ogg",
+        "/Audio/_SD/Hailer/SirGround.ogg",
+        "/Audio/_SD/Hailer/Vstavai.ogg",
+        "/Audio/_SD/Hailer/Tyanetsa.ogg",
     };
 
     public override void Initialize()
@@ -72,7 +76,7 @@ public sealed partial class HailerThunderdomeSystem : EntitySystem
             Loc.GetString($"STUL-{rInt}"),
             InGameICChatType.Speak,
             ChatTransmitRange.GhostRangeLimit,
-            nameOverride: Name(uid) + "(SecMask)",
+            nameOverride: Name(uid),
             checkRadioPrefix: false);
 
         args.Handled = true;
